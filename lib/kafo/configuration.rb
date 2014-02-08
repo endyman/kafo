@@ -12,8 +12,7 @@ module Kafo
     end
 
     def self.answers_file
-      return ::ANSWERS_FILE if defined?(::ANSWERS_FILE)
-      return '/etc/kafo/answers.yaml'
+      defined?(::ANSWERS_FILE) ? ::ANSWERS_FILE : '/etc/kafo/answers.yaml'
     end
 
     DEFAULT = {

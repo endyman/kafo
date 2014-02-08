@@ -359,10 +359,6 @@ module Kafo
       File.join(Dir.pwd, 'config', 'kafo.yaml')
     end
 
-    def answers_file
-      return ANSWERS_FILE if defined?(ANSWERS_FILE) && File.exists?(ANSWERS_FILE)
-    end
-
     def temp_config_file
       @temp_config_file ||= "/tmp/kafo_answers_#{rand(1_000_000)}.yaml"
     end
